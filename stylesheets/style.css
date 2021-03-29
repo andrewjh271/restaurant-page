@@ -1,0 +1,60 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #039be738;
+  font-family: "New Tegomin", serif;
+}
+
+#content {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/restaurant.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #b7ae7273;
+}
+
+.tab {
+  display: inline-block;
+  padding: 10px;
+  border-bottom: 3px solid transparent;
+}
+.tab:hover {
+  cursor: pointer;
+  border-bottom: 3px solid green;
+}
+
+h1 {
+  margin: 0 auto;
+  padding: 20px;
+  width: fit-content;
+  border-radius: 18px;
+  font-size: 57px;
+  text-align: center;
+  background-color: #ffffffb5;
+}
+
+p {
+  margin: 40px auto;
+  padding: 20px;
+  width: fit-content;
+  border-radius: 18px;
+  color: white;
+  font-size: 24px;
+  line-height: 1.5;
+  background-color: #00000096;
+}
+
+/*# sourceMappingURL=style.css.map */
