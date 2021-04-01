@@ -5,6 +5,7 @@ export default function() {
   const heading1 = document.createElement('h3');
   const heading2 = document.createElement('h3');
   const heading3 = document.createElement('h3');
+  
   const p1 = document.createElement('p');
   const p2 = document.createElement('p');
   const p3 = document.createElement('p');

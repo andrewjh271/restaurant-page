@@ -1,5 +1,7 @@
 import home from './home.js';
 import about from './about.js';
+import menu from './menu.js';
+import contact from './contact.js';
 
 const content = document.getElementById('content')
 content.appendChild(home());
@@ -23,5 +25,17 @@ const tabsHandler = (() => {
   aboutTab.addEventListener('click', () => {
     aboutTab.classList.add('tab-active');
     content.firstChild.replaceWith(about());
+  })
+
+  const menuTab = document.querySelector('.menu');
+  menuTab.addEventListener('click', () => {
+    menuTab.classList.add('tab-active');
+    content.firstChild.replaceWith(menu());
+  })
+
+  const locationTab = document.querySelector('.contact');
+  locationTab.addEventListener('click', () => {
+    locationTab.classList.add('tab-active');
+    content.firstChild.replaceWith(contact());
   })
 })();

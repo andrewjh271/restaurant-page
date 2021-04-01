@@ -73,6 +73,7 @@ h4 {
 
 .section-container {
   width: 70%;
+  max-width: 825px;
   margin: 50px auto;
   padding: 14px;
   border-radius: 14px;
@@ -82,5 +83,31 @@ h4 {
   h3 {
     margin: 0;
     font-size: 22px;
+  }
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3vw;
+  color: white;
+
+  h2 {
+    margin: 15px 0 5px;
+    font-size: 26px;
+    color: #ffc1624a;
+    text-decoration: underline;
+    text-shadow: white -2px -3px 0px;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 21px;
+  }
+
+  p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    line-height: 1.3;
   }
 }
