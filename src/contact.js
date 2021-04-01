@@ -14,7 +14,7 @@ export default function () {
   heading2.textContent = 'Phone';
   heading3.textContent = 'Email';
 
-  p1.textContent = '455 10th Avenue • San Diego • CA, 92101';
+  p1.innerHTML = '455 10th Avenue <br> San Diego, CA 92101';
   p2.textContent = '619.255.5032';
   p3.textContent = 'info@monzufreshpasta.com';
 
