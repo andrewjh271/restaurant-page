@@ -13,29 +13,13 @@ const tabsHandler = (() => {
     tabs.forEach((tab) => tab.classList.remove('tab-active'));
   };
 
-  tabs.forEach((tab) => tab.addEventListener('click', clearActiveTabs));
+  const tabDisplays = { home, about, menu, contact };
 
-  const homeTab = document.querySelector('.home');
-  homeTab.addEventListener('click', () => {
-    homeTab.classList.add('tab-active');
-    content.firstChild.replaceWith(home());
-  });
-
-  const aboutTab = document.querySelector('.about');
-  aboutTab.addEventListener('click', () => {
-    aboutTab.classList.add('tab-active');
-    content.firstChild.replaceWith(about());
-  });
-
-  const menuTab = document.querySelector('.menu');
-  menuTab.addEventListener('click', () => {
-    menuTab.classList.add('tab-active');
-    content.firstChild.replaceWith(menu());
-  });
-
-  const locationTab = document.querySelector('.contact');
-  locationTab.addEventListener('click', () => {
-    locationTab.classList.add('tab-active');
-    content.firstChild.replaceWith(contact());
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      clearActiveTabs();
+      tab.classList.add('tab-active');
+      content.firstChild.replaceWith(tabDisplays[tab.dataset.tab]());
+    });
   });
 })();

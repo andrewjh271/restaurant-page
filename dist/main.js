@@ -361,30 +361,14 @@ const tabsHandler = (() => {
     tabs.forEach((tab) => tab.classList.remove('tab-active'));
   };
 
-  tabs.forEach((tab) => tab.addEventListener('click', clearActiveTabs));
+  const tabDisplays = { home: _home__WEBPACK_IMPORTED_MODULE_0__.default, about: _about__WEBPACK_IMPORTED_MODULE_1__.default, menu: _menu__WEBPACK_IMPORTED_MODULE_2__.default, contact: _contact__WEBPACK_IMPORTED_MODULE_3__.default };
 
-  const homeTab = document.querySelector('.home');
-  homeTab.addEventListener('click', () => {
-    homeTab.classList.add('tab-active');
-    content.firstChild.replaceWith((0,_home__WEBPACK_IMPORTED_MODULE_0__.default)());
-  });
-
-  const aboutTab = document.querySelector('.about');
-  aboutTab.addEventListener('click', () => {
-    aboutTab.classList.add('tab-active');
-    content.firstChild.replaceWith((0,_about__WEBPACK_IMPORTED_MODULE_1__.default)());
-  });
-
-  const menuTab = document.querySelector('.menu');
-  menuTab.addEventListener('click', () => {
-    menuTab.classList.add('tab-active');
-    content.firstChild.replaceWith((0,_menu__WEBPACK_IMPORTED_MODULE_2__.default)());
-  });
-
-  const locationTab = document.querySelector('.contact');
-  locationTab.addEventListener('click', () => {
-    locationTab.classList.add('tab-active');
-    content.firstChild.replaceWith((0,_contact__WEBPACK_IMPORTED_MODULE_3__.default)());
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      clearActiveTabs();
+      tab.classList.add('tab-active');
+      content.firstChild.replaceWith(tabDisplays[tab.dataset.tab]());
+    });
   });
 })();
 
