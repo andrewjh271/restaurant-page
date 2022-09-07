@@ -2,6 +2,7 @@ import home from './home';
 import about from './about';
 import menu from './menu';
 import contact from './contact';
+import "../sass/style.scss";
 
 const content = document.getElementById('content');
 content.appendChild(home());
