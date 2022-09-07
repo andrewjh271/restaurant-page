@@ -996,7 +996,7 @@ const tabsHandler = (() => {
     tab.addEventListener('click', () => {
       clearActiveTabs();
       tab.classList.add('tab-active');
-      content.firstChild.replaceWith(tabDisplays[tab.dataset.tab]());
+      content.firstChild.replaceWith(tabDisplays[tab.dataset.name]());
     });
   });
 })();
