@@ -8,7 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   devServer: {
-    watchContentBase: true,
+    static: './dist',
   },
   plugins: [
     new HtmlWebpackPlugin({
