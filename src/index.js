@@ -7,20 +7,18 @@ import "../sass/style.scss";
 const content = document.getElementById('content');
 content.appendChild(home());
 
-const tabsHandler = (() => {
-  const tabs = document.querySelectorAll('.tab');
+const tabs = document.querySelectorAll('.tab');
 
-  const clearActiveTabs = () => {
-    tabs.forEach((tab) => tab.classList.remove('tab-active'));
-  };
+const clearActiveTabs = () => {
+  tabs.forEach((tab) => tab.classList.remove('tab-active'));
+};
 
-  const tabDisplays = { home, about, menu, contact };
+const tabDisplays = { home, about, menu, contact };
 
-  tabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      clearActiveTabs();
-      tab.classList.add('tab-active');
-      content.firstChild.replaceWith(tabDisplays[tab.name]());
-    });
+tabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    clearActiveTabs();
+    tab.classList.add('tab-active');
+    content.firstChild.replaceWith(tabDisplays[tab.name]());
   });
-})();
+});
